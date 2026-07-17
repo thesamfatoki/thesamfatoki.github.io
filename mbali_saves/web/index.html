@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> mbali saves </title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <h2 style="color: black;">mbali saves.</h2>
+    
+    <!-- Step 1: Income Input (budget_size) -->
+    <div class="form-group">
+        <label style="color: black;" for="income">enter your income (R):</label>
+        <input type="number" id="income" placeholder="0.00" step="100.00">
+    </div>
+
+    <!-- Step 2: Dynamic Expense Inputs (list_size) -->
+    <div class="form-group">
+        <label style="color: black;">expenses:</label>
+        <div id="expense-list">
+            <div class="expense-row">
+                <input type="text" class="expense-name" placeholder="item name (e.g. groceries)">
+                <input type="number" class="expense-amount" placeholder="amount (R)" step="10.00">
+            </div>
+        </div>
+        <button style="color: black;" type="button" class="secondary-btn" onclick="addExpenseRow()">+ add another expense</button>
+    </div>
+
+    <!-- Calculate Button -->
+    <button style="color: black;" onclick="calculateBudget()">calculate balance</button>
+
+    <!-- Terminal-style Output Window -->
+    <div class="output" id="console-output" style="display: none;"></div>
+</div>
+
+</body>
+</html>
